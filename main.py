@@ -3,7 +3,6 @@ import random
 import sys
 import os
 import select
-from message import decode_msg_size
 from pygame.locals import *    # For userevents to place obstacles
 pygame.init()                   #must be there to start the game
 win_size = W,H = 640,480                #width and heigth of the game window
@@ -19,12 +18,6 @@ clock = pygame.time.Clock()
 
 white = 255,255,255
 black = 0,0,0
-
-def get_message(fifo: int) -> str:
-    msg_size_bytes = os.read(fifo, 4)
-    msg_size = decode_msg_size(msg_size_bytes)
-    msg_content = os.read(fifo, msg_size).decode("utf8")
-    return msg_content
 
 class Dino():
     run = [pygame.image.load('images/tRex/1.png'),pygame.image.load('images/tRex/2.png')]   # load the running images
