@@ -1,5 +1,5 @@
 # chrome dinosaur game
-T-Rex Dinosaur - a replica of the hidden game from Chrome offline mode. Press Space to  your Dino, use down arrow (↓) to duck.
+T-Rex Dinosaur - a replica of the hidden game from Chrome offline mode using pygame module. Press Space to  your Dino, use down arrow (↓) to duck.
 
 ## To do
 - Add high score bar
